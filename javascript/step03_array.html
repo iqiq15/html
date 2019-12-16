@@ -59,10 +59,26 @@
             console.log(nums[i]);
         }
 
-        ///for .. in
+        //for .. in
         for(let i in nums){
             console.log(nums[i]);
         }
+
+        //es6 for .. of
+        for(let value of nums){
+            console.log(value);
+        }
+
+        //es5 for each
+        nums.forEach(function(value, index){
+            console.log(value);
+        });
+
+        //es6 arrow function
+        //function : =>
+        nums.forEach((value, index) => {
+            console.log(value);
+        })
     </script>
 </head>
 <body>
