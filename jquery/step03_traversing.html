@@ -3,39 +3,37 @@
 <head>
 	<meta charset="UTF-8">
     <title></title>
-    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.4.1 min.js"></script>
     <script type="text/javascript">
 		
         $(document).ready(function(){
-        
-            let test;
-            $("#message").keydown(function (key) {
-                if(key.which == 13){
-                        if(test){
-                            eval(test+".removeClass('s')");
-                        }
-                        
-                        test = $("#message").val().replace(";","");
-                        
-                        eval(test+".addClass('s')");
-                       
-                }
-            });
-            
-            const arrayDiv = $('div');
-            for(let i =0;i<arrayDiv.length;i++){
-                console.log(arrayDiv[i]);
-            }
-    
-            $('div').each( function(value,element) {
-                console.log(value, $(element));
-            });
-    
-            $('div').each( (value,element) => {
-                console.log(value, $(element));
-            });
-            
-        });
+			//$("li").eq(0).addClass('s');
+            //$("li").first().addClass('s');
+			//$("li").not(":first").addClass('s');
+			/*
+			$("li").each(function(index,element){
+				console.log(index);
+				console.log($(element).text());
+				console.log($(this));
+			})
+			*/
+			//$("aroot").children().addClass('s');
+			//$("3root > div").addClass('s');
+			//$(".third").closest('div').addClass('s');
+			//$("ul").closest('div').addClass('s');
+			//$("#root").find("li").addClass('s');
+			//$("#root").find("li").first().addClass('s');
+			//$("#root").find("li").first().next().addClass('s');
+			//$("#root").find("li").first()..nextAll().addClass('s');
+			//$("#root").find("li").parent().addClass('s');
+			//$("#root").find("li").parents().addClass('s');
+			//$("#root").find("li").parents().next().addClass('s');
+			//$("li").eq(2).prev().addClass('s');
+			//$("li").eq(2).prevAll().addClass('s');
+			$("li").parent().parent().siblings().addClass('s');
+			
+		});
+		
     </script>
 	<style type="text/css">
 		
@@ -65,9 +63,6 @@
 	</style>
 </head>
 <body>
-	<div id="header1">
-		<input type="text" id="message" /> 
-	</div>
 	<div id="panel">
 		<div id="root">
 			div id="root""
@@ -78,11 +73,11 @@
 				div
 				<ul>
 					ul
+					<li>li~~</li>
 					<li>li</li>
 					<li>li</li>
 					<li>li</li>
-					<li>li</li>
-					<li>li</li>
+					<li></li>
 				</ul>
 				<div class="third sung">div class="third sung"</div>
 			</div>
